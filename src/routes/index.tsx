@@ -172,6 +172,15 @@ function LandingPage() {
                       <CheckCircle className="h-3.5 w-3.5 text-green-600" />
                     </div>
                     <div>
+                      <h3 className="font-bold text-slate-900 mb-1">無理な営業・契約は一切しません</h3>
+                      <p className="text-slate-600 text-sm">合わなければその場でお断りします。</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-4">
+                    <div className="h-6 w-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <CheckCircle className="h-3.5 w-3.5 text-green-600" />
+                    </div>
+                    <div>
                       <h3 className="font-bold text-slate-900 mb-1">広告費は勝手に触りません</h3>
                       <p className="text-slate-600 text-sm">許可なく予算を上げたりしません。</p>
                     </div>
@@ -293,10 +302,23 @@ function LandingPage() {
           )}
         </section>
 
+        {/* Operation Info */}
+        <div className="container mx-auto px-6 text-center pb-20 space-y-4">
+          <p className="text-slate-600">
+            Amazon出品・広告運用を支援してきたECコンサルが作っています
+          </p>
+          <p className="text-slate-500 text-sm bg-slate-50 inline-block px-4 py-2 rounded-full border border-slate-100">
+            現在、少人数でβ運用しています。自動化は一部手動で行う場合があります。
+          </p>
+          <p className="font-bold text-blue-600">
+            現在はβ運用のため、ご相談・初期対応はすべて無料で行っています。
+          </p>
+        </div>
+
       </main>
 
       <footer className="border-t border-slate-200 py-12 bg-slate-50 text-center">
-        <p className="text-slate-500 text-sm">&copy; 2024 Handsfree PPC.</p>
+        <p className="text-slate-500 text-sm">&copy; 2025 Handsfree PPC.</p>
       </footer>
     </div>
   )
