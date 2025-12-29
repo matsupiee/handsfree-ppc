@@ -64,10 +64,8 @@ function LandingPage() {
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 border-b border-gray-100 bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/60">
         <div className="container mx-auto px-6 h-16 flex items-center justify-between max-w-6xl">
-          <div className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-full bg-black flex items-center justify-center">
-              <Zap className="h-4 w-4 text-white fill-white" />
-            </div>
+          <div className="flex items-center gap-3">
+            <img src="/android-chrome-512x512.png" alt="Handsfree PPC" className="h-10 w-10 " />
             <span className="font-bold text-lg tracking-tight text-slate-900">Handsfree PPC</span>
           </div>
           <Button variant="ghost" className="text-sm font-medium text-slate-500 hover:bg-gray-50 hover:text-slate-900 transition-colors" onClick={scrollToForm}>
