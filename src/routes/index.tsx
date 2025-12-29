@@ -4,7 +4,7 @@ import { Button } from '../components/ui/button'
 import { Input } from '../components/ui/input'
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card'
 import { Badge } from '../components/ui/badge'
-import { Zap, CheckCircle, Sparkles, ChevronRight, ArrowRight, Filter, Cpu, TrendingUp } from 'lucide-react'
+import { CheckCircle, Sparkles, ChevronRight, ArrowRight, Filter, Cpu, TrendingUp } from 'lucide-react'
 import { motion } from "motion/react"
 import { toast } from 'sonner'
 import { Textarea } from '../components/ui/textarea'
@@ -350,7 +350,7 @@ function LandingPage() {
 
       <footer className="border-t border-gray-100 py-12 bg-white text-center">
         <div className="flex items-center justify-center gap-2 mb-4 opacity-70">
-          <Zap className="h-4 w-4 text-black" />
+          <img src="/android-chrome-512x512.png" alt="Handsfree PPC" className="h-6 w-6" />
           <span className="font-bold text-slate-900">Handsfree PPC</span>
         </div>
         <p className="text-slate-400 text-sm">&copy; 2025 Handsfree PPC.</p>
