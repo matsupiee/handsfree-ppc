@@ -74,8 +74,8 @@ function LandingPage() {
             transition={{ duration: 0.6 }}
           >
             <div className="flex justify-center mb-6">
-              <Badge className="bg-blue-50 text-blue-700 border-blue-200 px-4 py-1.5 text-sm uppercase tracking-wider hover:bg-blue-100">
-                Amazon Sellers Only
+              <Badge className="bg-blue-50 text-blue-700 border-blue-200 px-4 py-1.5 text-sm tracking-wider hover:bg-blue-100">
+                Amazon出品者向け
               </Badge>
             </div>
 
@@ -88,8 +88,8 @@ function LandingPage() {
             </h1>
 
             <p className="text-xl md:text-2xl font-medium text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-              広告を“勝手に回す”運用を代行します。<br className="hidden md:inline" />
-              無駄なコストを削減し、利益を最大化する最も確実な方法。
+              広告運用の手間を減らします。<br className="hidden md:inline" />
+              無駄な支出を抑えつつ、自然に成果が残る仕組みです。
             </p>
 
             <Button
@@ -115,11 +115,11 @@ function LandingPage() {
                 <div className="h-12 w-12 rounded-lg bg-red-50 flex items-center justify-center mb-2">
                   <X className="h-6 w-6 text-red-500" />
                 </div>
-                <CardTitle className="text-lg text-slate-900">無駄な広告費を止める</CardTitle>
+                <CardTitle className="text-lg text-slate-900">キーワード調整</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 text-sm leading-relaxed">
-                  垂れ流しになっている赤字キーワードを容赦なくカットします。
+                  赤字キーワードを自動でカットし、勝ちキーワードを自動強化します。
                 </p>
               </CardContent>
             </Card>
@@ -132,11 +132,11 @@ function LandingPage() {
                 <div className="h-12 w-12 rounded-lg bg-blue-50 flex items-center justify-center mb-2">
                   <Sparkles className="h-6 w-6 text-blue-600" />
                 </div>
-                <CardTitle className="text-lg text-slate-900">すべて自動化</CardTitle>
+                <CardTitle className="text-lg text-slate-900">入札・予算を自動で調整</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 text-sm leading-relaxed">
-                  入札調整、予算管理など、面倒な作業はすべて自動化します。
+                  入札調整、予算管理など、面倒な作業を自動で行います。
                 </p>
               </CardContent>
             </Card>
@@ -146,76 +146,117 @@ function LandingPage() {
                 <div className="h-12 w-12 rounded-lg bg-slate-100 flex items-center justify-center mb-2">
                   <Send className="h-6 w-6 text-slate-600" />
                 </div>
-                <CardTitle className="text-lg text-slate-900">自動で改善</CardTitle>
+                <CardTitle className="text-lg text-slate-900">コスト削減</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 text-sm leading-relaxed">
-                  日々、自動で改善を行います。
+                  高額な運用手数料は不要です。
+                  人に頼らない仕組みを構築しているため、コストを安く抑えられます。
                 </p>
               </CardContent>
             </Card>
           </div>
         </section>
 
-        {/* Promise */}
-        <section className="bg-slate-50 border-y border-slate-200 py-24 mb-32">
-          <div className="container mx-auto px-6 max-w-4xl">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl font-bold mb-6 text-slate-900">
-                  実績の代わりに<br />
-                  <span className="text-blue-600">「約束」</span>をします
-                </h2>
-                <div className="space-y-6">
-                  <div className="flex gap-4">
-                    <div className="h-6 w-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <CheckCircle className="h-3.5 w-3.5 text-green-600" />
+        {/* Promise / About Us */}
+        <section className="relative overflow-hidden border-y border-slate-200 bg-slate-50/50 py-24 mb-32">
+          {/* Background decoration */}
+          <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[600px] h-[600px] bg-blue-100 rounded-full blur-3xl opacity-40 -z-10"></div>
+
+          <div className="container mx-auto px-6 max-w-5xl">
+            <div className="grid md:grid-cols-2 gap-16 items-start">
+              <div className="space-y-8">
+                <div>
+                  <h2 className="text-3xl font-bold mb-4 text-slate-900 leading-tight">
+                    About us
+                  </h2>
+                  {/* <p className="text-lg text-slate-600 leading-relaxed font-medium">
+                    Amazon広告の「考える手間」を<br />
+                    できるだけ減らすチームです
+                  </p> */}
+                </div>
+
+                <div className="space-y-4 text-slate-600 leading-relaxed">
+                  <p>
+                    私たちは、Amazon出品や広告運用の支援に関わってきた経験をもとに、
+                    広告を「見なくていい」状態に近づける仕組みを作っています。
+                  </p>
+                  <p>
+                    本来、人が判断しなくてもよい作業はできるだけ自動化し、
+                    出品者の方が商品や戦略に集中できる環境を目指しています。
+                  </p>
+                </div>
+
+                {/* Trust Points */}
+                <div className="space-y-4 pt-4">
+                  <div className="flex items-start gap-3">
+                    <div className="h-6 w-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Sparkles className="h-3.5 w-3.5" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-slate-900 mb-1">無理な営業・契約は一切しません</h3>
-                      <p className="text-slate-600 text-sm">合わなければその場でお断りします。</p>
+                      <h4 className="font-bold text-slate-900 text-sm">
+                        仕組み前提の運用
+                      </h4>
+                      <p className="text-sm text-slate-600 mt-1">
+                        人に依存しない設計を前提にしているため、運用はシンプルで無駄がありません。
+                      </p>
                     </div>
                   </div>
-                  <div className="flex gap-4">
-                    <div className="h-6 w-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <CheckCircle className="h-3.5 w-3.5 text-green-600" />
+
+                  <div className="flex items-start gap-3">
+                    <div className="h-6 w-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <CheckCircle className="h-3.5 w-3.5" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-slate-900 mb-1">広告費は勝手に触りません</h3>
-                      <p className="text-slate-600 text-sm">許可なく予算を上げたりしません。</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="h-6 w-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <CheckCircle className="h-3.5 w-3.5 text-green-600" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-slate-900 mb-1">まず“止血”からやります</h3>
-                      <p className="text-slate-600 text-sm">利益を確保するため、無駄を止めることを最優先します。</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="h-6 w-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <CheckCircle className="h-3.5 w-3.5 text-green-600" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-slate-900 mb-1">合わなければ無料でやめられます</h3>
-                      <p className="text-slate-600 text-sm">成果が出なければ、いつでも解約可能です。</p>
+                      <h4 className="font-bold text-slate-900 text-sm">
+                        β版運用・無理な営業なし
+                      </h4>
+                      <p className="text-sm text-slate-600 mt-1">
+                        現在は少人数でβ版を運用中です。ご相談ベースで、合わない場合はそのまま終了できます。
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-xl relative">
-                <div className="absolute -top-4 -right-4 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg">
-                  Risk Free
+
+
+              {/* Right Side Card */}
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-2xl transform rotate-1 opacity-10"></div>
+                <div className="bg-white p-8 md:p-10 rounded-2xl border border-slate-100 shadow-xl relative z-10 transition-transform hover:-translate-y-1 duration-300">
+
+                  <div className="mb-8 text-center">
+                    <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                      まずは軽い相談から
+                    </h3>
+                    <p className="text-slate-500 text-sm leading-relaxed">
+                      「今の広告、見直した方がいい？」<br />
+                      そんな軽い相談からお受けします。
+                    </p>
+                  </div>
+
+                  <ul className="space-y-4 mb-8">
+                    <li className="flex items-center gap-3 text-sm text-slate-700">
+                      <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                      <span>ご相談・初期対応はすべて無料</span>
+                    </li>
+                    <li className="flex items-center gap-3 text-sm text-slate-700">
+                      <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                      <span>無理な営業・契約はありません</span>
+                    </li>
+                    <li className="flex items-center gap-3 text-sm text-slate-700">
+                      <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                      <span>β運用のため、個別に対応しています</span>
+                    </li>
+                  </ul>
+
+                  <Button
+                    onClick={scrollToForm}
+                    className="w-full h-12 text-base font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-100 rounded-full"
+                  >
+                    相談してみる
+                  </Button>
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-center text-slate-900">無料で相談</h3>
-                <p className="text-slate-600 text-sm text-center mb-6">
-                  今の状況で効果が出るか、正直にお答えします。
-                </p>
-                <Button onClick={scrollToForm} className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                  相談はこちらから
-                </Button>
               </div>
             </div>
           </div>
@@ -301,19 +342,6 @@ function LandingPage() {
             </motion.div>
           )}
         </section>
-
-        {/* Operation Info */}
-        <div className="container mx-auto px-6 text-center pb-20 space-y-4">
-          <p className="text-slate-600">
-            Amazon出品・広告運用を支援してきたECコンサルが作っています
-          </p>
-          <p className="text-slate-500 text-sm bg-slate-50 inline-block px-4 py-2 rounded-full border border-slate-100">
-            現在、少人数でβ運用しています。自動化は一部手動で行う場合があります。
-          </p>
-          <p className="font-bold text-blue-600">
-            現在はβ運用のため、ご相談・初期対応はすべて無料で行っています。
-          </p>
-        </div>
 
       </main>
 
