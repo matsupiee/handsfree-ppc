@@ -27,17 +27,31 @@ function LandingPage() {
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setLoading(true)
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
 
-    // Simulate API call
-    setTimeout(() => {
-      setLoading(false)
-      setSubmitted(true)
-      toast.success('お問い合わせを受け付けました')
-    }, 1500)
-  }
+    const GAS_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbzXuJr4nd33B8Vr9Pwrcqf4UB4Or5Nx4L2tO80CcXceN2jpLlhxu7cj96RksMMcb6AX/exec'
+
+    await fetch(GAS_WEB_APP_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "text/plain",
+      },
+      body: JSON.stringify({
+        email,
+        spend,
+        trouble,
+        ua: navigator.userAgent,
+      }),
+    });
+
+    setLoading(false);
+    setSubmitted(true);
+
+    toast.success('お問い合わせを受け付けました');
+  };
 
   const scrollToForm = () => {
     document.getElementById('inquiry-form')?.scrollIntoView({ behavior: 'smooth' })
@@ -289,10 +303,10 @@ function LandingPage() {
                         <SelectValue placeholder="選択してください" />
                       </SelectTrigger>
                       <SelectContent className="bg-white border-gray-200 text-slate-900">
-                        <SelectItem value="low">5万円以下</SelectItem>
-                        <SelectItem value="mid">5万円 〜 30万円</SelectItem>
-                        <SelectItem value="high">30万円 〜 100万円</SelectItem>
-                        <SelectItem value="enterprise">100万円以上</SelectItem>
+                        <SelectItem value="5万円以下">5万円以下</SelectItem>
+                        <SelectItem value="5万円〜30万円">5万円〜30万円</SelectItem>
+                        <SelectItem value="30万円〜100万円">30万円〜100万円</SelectItem>
+                        <SelectItem value="100万円以上">100万円以上</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
@@ -327,10 +341,6 @@ function LandingPage() {
                 <CheckCircle className="h-10 w-10 text-green-600" />
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-4">ありがとうございます。</h3>
-              <p className="text-slate-600 leading-relaxed mb-8">
-                現状を軽く見た上で<br />
-                「できる／できない」を正直に伝えます。
-              </p>
               <Button variant="outline" onClick={() => setSubmitted(false)} className="border-gray-200 text-slate-700 hover:bg-gray-50 hover:text-slate-900 bg-white">
                 トップに戻る
               </Button>
